@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+    <!-- add our web resources -->
+    <web-resource key="resources" name="TimeTrackerPlugin Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="plugin.css" location="/css/plugin.css"/>
+        <resource type="download" name="plugin.js" location="/js/plugin.js"/>
+        <resource type="download" name="images/" location="/images"/>
+        <context>TimeTrackerPlugin</context>
+    </web-resource>
+    <web-panel name="TimeTrackerWebPanel" i18n-name-key="timetracker-web-panel.name" key="timetracker-web-panel"
+               location="atl.jira.view.issue.right.context" weight="1000">
+        <label>Time Tracker</label>
+        <resource name="view" type="velocity" location="/templates/timetracker-webpanel.vm"/>
+    </web-panel>
+</atlassian-plugin>

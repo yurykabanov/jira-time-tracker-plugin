@@ -1,0 +1,13 @@
+#timetracker-panes.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#timetracker-panes .timetracker-panes-left {
+    float: left;
+}
+
+#timetracker-panes .timetracker-panes-right {
+    float: right;
+}

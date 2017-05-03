@@ -1,0 +1,9 @@
+$webResourceManager.requireResource("ru.yurykabanov.jira.timetracker.TimeTrackerPlugin:resources")
+<div id="timetracker-panes" class="clearfix">
+    <div class="timetracker-panes-left">Total time: <span class="total-time">0m 0s</span></div>
+    <div class="timetracker-panes-right">
+        <button id="timetracker-toggle-btn" class="aui-button">
+            <span class="state">Start</span>
+        </button>
+    </div>
+</div>
